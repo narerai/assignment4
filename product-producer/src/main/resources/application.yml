@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: product-producer
+  config:
+    import: "optional:configserver:http://localhost:8088"
+  datasource: 
+    url: jdbc:mysql://localhost:3306/ProductDb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: update
+    
+server:
+  port: 8080
